@@ -22,15 +22,9 @@ int lcm(int n, int m){
 
 
 int main(){
-  int n,m;
-  string s,t;
-  cin >> n >> m >> s >> t;
-
-  if(n < m) swap(n,m);
-
-  if(n%m == 0) {cout << -1 << endl; return 0;}
-  else cout << lcm(n,m) << endl;
-  
-
+  ll n,m;
+  n = 1000000007;
+  m = 11;
+  cout << lcm(n,m) << endl;
   
 }
