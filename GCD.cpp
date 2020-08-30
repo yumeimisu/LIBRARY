@@ -4,10 +4,11 @@ using namespace std;
 typedef long long ll;
 const int inf = 1001001001;
 
+
 int gcd(int n, int m){
   if(n < m) swap(n,m);
 
-  if(m==0) return 0;
+  if(m==0) return n; // 0's deviser is all numbers.
   while(m > 0){
     int res = n%m;
     n = m;
@@ -15,6 +16,7 @@ int gcd(int n, int m){
   }
   return n;
 }
+//
 
 int lcm(int n, int m){
   return m*n/gcd(n,m);
@@ -23,8 +25,5 @@ int lcm(int n, int m){
 
 int main(){
   ll n,m;
-  n = 1000000007;
-  m = 11;
   cout << lcm(n,m) << endl;
-  
 }
